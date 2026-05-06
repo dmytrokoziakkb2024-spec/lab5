@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            flex-direction: column;
+            align-items: center;
+        }
+        main {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="theme-toggle" style="position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 10px; cursor: pointer; border-radius: 5px;">Змінити тему</button>
+
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Залиште відгук</h2>
+            <form action="https://formspree.io/f/mlgoavna" method="POST"> 
+                <label for="name">Ім'я:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="phone">Номер телефону:</label><br>
+                <input type="tel" id="phone" name="phone" required><br>
+                
+                <label for="message">Повідомлення:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                
+                <input type="submit" value="Відправити">
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <header>
+            <h1>Козяк Дмитро</h1>
+            <p><strong>Ціль:</strong> Отримати позицію Junior Software Engineer для розвитку професійних навичок.</p>
+            <hr>
+        </header>
+
+        <section>
+            <h2>Короткий профіль</h2>
+            <p>Захоплююсь створенням ефективного програмного забезпечення та вирішенням складних логічних задач. Маю досвід роботи з об'єктно-орієнтованим програмуванням. 
+            Швидко засвоюю нові концепції та вмію працювати з технічною документацією.</p>
+        </section>
+
+        <section>
+            <h2>Технічний стек</h2>
+            <ul>
+                <li><strong>Мови:</strong> Python, C++, базовий HTML</li>
+                <li><strong>Середовища та редактори:</strong> Visual Studio Code</li>
+                <li><strong>Інструменти:</strong> Git, командний рядок (термінал)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Освіта</h2>
+            <p><strong>Бакалавр кібербезпеки</strong></p>
+            <p><em>Львівська політехніка</em> | 2024 - 2028</p>
+            <p>Основні курси: Алгоритми та структури даних, Операційні системи, Архітектура комп'ютерів.</p>
+        </section>
+
+        <section id="comments-section">
+            <h2>Відгуки попередніх роботодавців</h2>
+            <div id="comments-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p><small>© 2026. Документ створено за допомогою базових тегів HTML.</small></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
